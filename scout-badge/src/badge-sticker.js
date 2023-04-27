@@ -26,9 +26,9 @@ class BadgeSticker extends LitElement {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 200px;
-        height: 200px;
-        background-color: var(--badge-color, #000000);
+        width: 300px;
+        height: 300px;
+        background-color: var(--badge-color, #1198b0);
         border: 2px dashed var(--badge-stitch-color, #FFF);
         border-radius: 50%;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
