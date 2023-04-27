@@ -31,16 +31,17 @@ class BadgeSticker extends LitElement {
         background-color: var(--badge-color, #1198b0);
         border: 2px dashed var(--badge-stitch-color, #FFF);
         border-radius: 50%;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 20px rgba(0.5, 0.5, 0.5, 0.5);
         overflow: hidden;
         cursor: pointer;
+        
       }
       .badge.locked {
         opacity: 0.5;
         cursor: not-allowed;
       }
       .badge-icon {
-        font-size: 70px;
+        font-size: 50px;
         color: var(--badge-icon-color, #ffffff);
       }
       .badge-label {
@@ -56,6 +57,14 @@ class BadgeSticker extends LitElement {
         margin-top: 5px;
         color: var(--badge-date-color, #ffffff);
       }
+
+      
+
+      .verfication-link {
+        font-size: 10px;
+        margin-top: 5px;
+        color: var(--badge-ver-color, #ffffff);
+      }
     `;
   }
 
@@ -67,9 +76,11 @@ class BadgeSticker extends LitElement {
   render() {
     return html`
       <div class="badge ${this.locked ? 'locked' : ''}">
+        
+        <div class="badge-date">${this.date}</div>
         <div class="badge-icon">${this.icon}
           <div class="badge-label">${this.title}</div>
-          <div class="badge-date">${this.date}</div>
+          <div class="verification-link">${this.verificationLink}</div>
         </div>
       </div>
     `;
