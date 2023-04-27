@@ -76,9 +76,8 @@ class BadgeSticker extends LitElement {
   render() {
     return html`
       <div class="badge ${this.locked ? 'locked' : ''}">
-        
-        <div class="badge-date">${this.date}</div>
         <div class="badge-icon">${this.icon}
+        <div class="badge-date">${this.date}</div>
           <div class="badge-label">${this.title}</div>
           <div class="verification-link">${this.verificationLink}</div>
         </div>
