@@ -16,7 +16,7 @@ class MeritBadge extends LitElement {
   static get styles() {
     return css`
       :host {
-        display: block;
+        display: inline-block;
         text-align: center;
         position: relative;
         margin-bottom: 50px;

@@ -17,7 +17,7 @@ class BadgeSticker extends LitElement {
   static get styles() {
     return css`
       :host {
-        display: inline-block;
+        display: inline;
         text-align: center;
         position: relative;
       }
@@ -60,8 +60,8 @@ class BadgeSticker extends LitElement {
 
       
 
-      .verfication-link {
-        font-size: 10px;
+      .verification-link {
+        font-size: 12px;
         margin-top: 5px;
         color: var(--badge-ver-color, #ffffff);
       }
@@ -77,7 +77,7 @@ class BadgeSticker extends LitElement {
     return html`
       <div class="badge ${this.locked ? 'locked' : ''}">
         <div class="badge-icon">${this.icon}
-        <div class="badge-date">${this.date}</div>
+          <div class="badge-date">${this.date}</div>
           <div class="badge-label">${this.title}</div>
           <div class="verification-link">${this.verificationLink}</div>
         </div>
