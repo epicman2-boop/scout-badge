@@ -58,6 +58,9 @@ class BadgeSticker extends LitElement {
         color: var(--badge-date-color, #ffffff);
       }
 
+      path {
+        /* fill: transparent; */
+      }
       
 
       .verification-link {
@@ -76,10 +79,21 @@ class BadgeSticker extends LitElement {
   render() {
     return html`
       <div class="badge ${this.locked ? 'locked' : ''}">
-        <div class="badge-icon">${this.icon}
-          <div class="badge-date">${this.date}</div>
-          <div class="badge-label">${this.title}</div>
-          <div class="verification-link">${this.verificationLink}</div>
+        <div class="badge-icon">
+        
+        <div class="badge-date">${this.date}</div>
+        ${this.icon}
+        <div class="verification-link">${this.verificationLink}</div>
+          <div class="badge-label">
+            <svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="intermediate" d="M 7 5 C 25 25, 75 25, 93 5" />
+              </defs>
+              <text font-size="12px">
+                <textPath startOffset="50%" dominant-baseline="middle" text-anchor="middle" xlink:href="#intermediate">${this.title}</textPath>
+              </text>
+            </svg>
+          </div>
         </div>
       </div>
     `;
