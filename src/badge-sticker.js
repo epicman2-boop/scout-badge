@@ -7,10 +7,11 @@ class BadgeSticker extends LitElement {
     return {
       title: { type: String },
       date: { type: String },
-      skills: { type: Array },
+      skills: { type: String },
       icon: { type: String },
       locked: { type: Boolean },
       verificationLink: { type: String },
+      details: {type: String},
     };
   }
 
@@ -66,7 +67,19 @@ class BadgeSticker extends LitElement {
       .verification-link {
         font-size: 12px;
         margin-top: 5px;
-        color: var(--badge-ver-color, #ffffff);
+        color: var(--badge-ver-color, #8c08f8);
+      }
+
+      .details {
+        font-size: 12px;
+        margin-top: 5px;
+        color: var(--badge-ver-color, #eb0b82);
+      }
+
+      .skills {
+        font-size: 12px;
+        margin-top: 5px;
+        color: var(--badge-ver-color, #ecf406);
       }
     `;
   }
@@ -84,6 +97,8 @@ class BadgeSticker extends LitElement {
         <div class="badge-date">${this.date}</div>
         ${this.icon}
         <div class="verification-link">${this.verificationLink}</div>
+        <div class="details">${this.details}</div>
+          <div class="skills">${this.skills}</div>
           <div class="badge-label">
             <svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -94,6 +109,7 @@ class BadgeSticker extends LitElement {
               </text>
             </svg>
           </div>
+          
         </div>
       </div>
     `;

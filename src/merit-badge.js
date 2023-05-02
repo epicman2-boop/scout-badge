@@ -7,9 +7,10 @@ class MeritBadge extends LitElement {
     return {
       title: { type: String },
       date: { type: String },
-      skills: { type: Array },
+      skills: { type: String },
       icon: { type: String },
-      verificationLink: { type: String }
+      verificationLink: { type: String },
+      details: {type: String}
     };
   }
 
@@ -52,7 +53,8 @@ class MeritBadge extends LitElement {
         .skills=${this.skills}
         .icon=${this.icon}
         .locked=${this.locked}
-        .verificationLink=${this.verificationLink}>
+        .verificationLink=${this.verificationLink}
+        .details=${this.details}>
       </badge-sticker>
     <!-- button -->
       <button id="unlockBadgeButton" 
